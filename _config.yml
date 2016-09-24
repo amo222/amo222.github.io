@@ -1,9 +1,9 @@
 # Site settings
 title: crowdscreen
-email: info@crowdscreen.com
-description: > # Read up on crowdscreen.
+email: annmari.darj@gmail.com
+description: > # Din väg till miljonen.
 baseurl: "" # the sub-path of your site, e.g. /blog/
-url: "https://kristofferdarj.github.io/crowdscreen.github.io" # the base host-name & protocol for your site
+url: "https://amo222.github.io/" # the base host-name & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -19,5 +19,5 @@ assets:
     - assets/stylesheets
 
 navigation:
-- text: Pricing
-  url: /#pricing
+- text: Beställ
+  url: /#order

@@ -77,11 +77,11 @@
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
-  background-image: url('/assets/images/background_hero.jpg');
+  background-image: url('/assets/images/background_hero2.jpg');
   background-size: cover;
   background-position-y: bottom;
   border-bottom: 3px solid $color-heroBorder;
-  height: 65vh;
+  height: 95vh;
   min-height: 310px;
   padding: 45px 0 30px 0;
 
@@ -146,10 +146,6 @@
         background: url('/assets/images/section_features.jpg');
     }
 }
-.section--tech {
-  background-color: $color-techBackground;
-  min-height: 40vh;
-}
 
 //Forms
 .form {
@@ -157,10 +153,10 @@
     @include flex-direction(column);
     @include justify-content(center);
     padding: 15px;
-
-    @media(min-width: 450px) {
-        @include flex-direction(row);
-    }
+}
+//Order form
+.fieldset {
+    @include flexbox();
 }
 .form_input {
 	@include box-shadow(0,0, 2px, $color-formInputShadow, false);
@@ -230,50 +226,6 @@
 }
 .usp_text {
     margin: 0;
-}
-
-//Tech
-.tech {
-    @include flexbox();
-    @include flex-direction(column);
-    @include justify-content(space-between);
-    padding: 30px 0;
-
-    @media(min-width: 800px) {
-        @include flex-direction(row);
-    }
-}
-.tech_headline {
-  @extend .headlineLarge;
-  margin-bottom: 0.2rem;
-}
-.tech_text {
-    max-width: 33em;
-}
-.tech_partners {
-    @include flexbox();
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
-    @include align-items(center);
-
-    @media(min-width: 800px) {
-        @include flex-direction(column);
-        width: 280px;
-    }
-}
-.tech_partner {
-    @include transitionDuration(0.2s);
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    margin: 15px 0;
-    max-height: 100px;
-    max-width: 100px;
-
-    &:hover {
-        filter: grayscale(0);
-        -webkit-filter: grayscale(0);
-    }
 }
 
 .prices {

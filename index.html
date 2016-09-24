@@ -3,18 +3,47 @@ layout: default
 ---
 <div class="hero">
   <div>
-    <h1 class="hero_headline">Comments without&nbsp;haters</h1>
-    <form class="form" method="POST" action="http://formspree.io/kristoffer.darj@gmail.com">
-        <input type="email" class="form_input" placeholder="your.email@domain.com" name="_replyto">
-        <input type="submit" class="form_submit" value="Email info">
-    </form>
-    <h2 class="hero_subheading">Sign up for our limited beta now.</h2>
+    <h1 class="hero_headline">Din väg till miljonär börjar&nbsp;här.</h1>
   </div>
 </div>
 <div class="section section--description">
     <div class="inner description">
         <p class="description_text">A solution for companies where haters are a problem, crowdscreen is a crowdsourced service that automatically keep haters out of discussions. Unlike traditional moderation, crowdscreen is mostly automated and gets smarter for each processed comment.</p>
     </div>
+</div>
+<div class="section section--order">
+    <form class="form" method="POST" action="http://formspree.io/annmari.darj@gmail.com">
+        <fieldset class="fieldset fieldset--receiver">
+            <label for="receiver_name">Mottagarens namn</label>
+            <input id="receiver_name" type="input" class="form_input" name="receiver_name">
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--sender">
+            <label for="sender_name">Adressatens namn</label>
+            <input id="sender_name" type="input" class="form_input" name="sender_name">
+
+            <label for="adress">Adress</label>
+            <input id="adress" type="input" placeholder="Lyckliga gatan 1" class="form_input" name="adress">
+
+            <div class="form_zipCity">
+                <div>
+                    <label for="zip">Postnummer</label>
+                    <input id="zip" type="input" placeholder="832 44" class="form_input" name="zip">
+                </div>
+
+                <div>
+                    <label for="city">Postort</label>
+                    <input id="city" type="input" placeholder="Frösön" class="form_input" name="city">
+
+                </div>
+            </div>
+
+            <label for="email">E-post</label>
+            <input id="email" type="email" class="form_input" placeholder="din@epost.se" name="_replyto">
+        </fieldset>
+
+        <input type="submit" class="form_submit" value="Beställ">
+    </form>
 </div>
 <div class="section section--usps">
     <div class="inner">
@@ -31,20 +60,6 @@ layout: default
                 <h3 class="usp_headline">Brand</h3>
                 <p class="usp_text">Makes sure your brand isn't associated with&nbsp;haters. Sorts out the haters around the clock.</span>
             </div>
-        </div>
-    </div>
-</div>
-<div class="section section--tech">
-    <div class="inner tech">
-        <div>
-            <h2 class="tech_headline">Developers first</h2>
-            <p class="tech_text">Our service is built with proven technology in a robust, reliable and scalable fashion. When a user is about to comment on your site a request is sent to our API. The json-response contains information whether the user is a known hater or not, allowing your site to take action.</p>
-            <p class="tech_text">Using crowdscreen is easy. If your running on any of the large platforms, just install the corresponding plugin and you are ready to go. If your platform need something custom we have a perfectly documented API complete with examples for the most common languages (hey we're developers too you know!).</p>
-        </div>
-        <div class="tech_partners">
-            <img src="/assets/images/partner_heroku.svg" class="tech_partner">
-            <img src="/assets/images/partner_aws.svg" class="tech_partner">
-            <img src="/assets/images/partner_rails.svg" class="tech_partner">
         </div>
     </div>
 </div>
