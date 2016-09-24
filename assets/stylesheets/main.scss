@@ -1,0 +1,345 @@
+---
+# Main sass file
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "_modules/reset",
+        "_modules/constants",
+        "_modules/mixins",
+        "_modules/typography",
+        "_modules/_zindex",
+        "_modules/colours",
+        "_modules/flexboxgrid";
+* {
+	@include box-sizing();
+}
+.body {
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100vh;
+  position: relative;
+	@extend .font-text;
+  background-color: $color-pageBg;
+}
+.inner {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+
+    @media(min-width: 600px)
+    {
+        width: calc(100% - 30px);
+        min-width: 0;
+        max-width: calc(100% - 30px);
+    }
+    @media(min-width: $screen-lg)
+    {
+        width: calc(#{$screen-lg} - 30px);
+        max-width: calc(#{$screen-lg} - 30px);
+    }
+}
+.flex_filler {
+  display: flex;
+  flex-grow: 1;
+}
+.header {
+  @include flexbox();
+  @include align-items(center);
+  background-color: $color-headerBackground;
+  align-items: center;
+  height: 45px;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $zIndex-1;
+
+  @media(min-width: $screen-md) {
+      height: 60px;
+  }
+}
+.inner--header {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+.logo {
+  @extend .font-text;
+  color: $color-logo;
+  text-decoration: none;
+}
+.logo_accent {
+  font-weight: $fontWeight-bold;
+}
+.hero {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  background-image: url('/assets/images/background_hero.jpg');
+  background-size: cover;
+  background-position-y: bottom;
+  border-bottom: 3px solid $color-heroBorder;
+  height: 65vh;
+  min-height: 310px;
+  padding: 45px 0 30px 0;
+
+  @media(min-width: $screen-md) {
+      padding: 75px 0 30px 0;
+  }
+}
+.hero_headline {
+	@extend .headlineLargest;
+	@include textShadow();
+	color: $color-textSecondary;
+	text-align: center;
+    padding: 0 15px 0.3em 15px;
+}
+.hero_subheading {
+    @extend .headlineMedium;
+    @include textShadow();
+    color: $color-textSecondary;
+    padding: 0 15px 0.3em 15px;
+    text-align: center;
+}
+
+//Main navigation
+.mainNavigation {
+  @extend .font-text;
+  display: none;
+
+  @media(min-width: $screen-md) {
+      display: flex;
+  }
+}
+.mainNavigation_list {
+	@include flexbox();
+	@include justify-content(right);
+}
+.mainNavigation_item {
+    @include flexbox();
+}
+.mainNavigation_link {
+	color: $color-link;
+	padding: 10px;
+	text-decoration: none;
+
+	&:hover {
+		@include rounded(2px);
+		background-color: rgba($color-link,0.1);
+	}
+}
+
+.section {
+  @include flexbox();
+  width: 100%;
+}
+.section--description {
+    background-color: $color-sectionBackground;
+}
+.section--usps {
+    background-color: $color-aquaHaze;
+    background-size: cover;
+
+    @media(min-width: 900px) {
+        background: url('/assets/images/section_features.jpg');
+    }
+}
+.section--tech {
+  background-color: $color-techBackground;
+  min-height: 40vh;
+}
+
+//Forms
+.form {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    padding: 15px;
+
+    @media(min-width: 450px) {
+        @include flex-direction(row);
+    }
+}
+.form_input {
+	@include box-shadow(0,0, 2px, $color-formInputShadow, false);
+	@include rounded();
+	border: 1px solid $color-formInputBorder;
+	font-size: $fontSize-x5;
+	outline: none;
+	padding: 10px;
+	text-decoration: none;
+
+    @media(min-width: 450px) {
+        min-width: 15em;
+    }
+}
+.form_submit {
+    @include raisedButton($color-mantis,$color-textSecondary);
+    background: $color-mantis;
+    border: 1px solid $color-mantis;
+    padding: 10px 30px;
+}
+
+//Presentation
+.description {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    min-height: 30vh;
+    padding: 30px 0;
+}
+.description_text {
+	font-size: $fontSize-x6;
+    margin-bottom: 0;
+	max-width: 33em;
+}
+
+//USP
+.usp_container {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(space-between);
+  padding: 0 0 30px 0;
+  width: 100%;
+
+  @media(min-width: 900px) {
+      @include align-items(flex-end);
+      @include flex-direction(column);
+      padding-right: 30px;
+  }
+}
+.usp {
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(flex-start);
+	padding: 2em 0 0 0;
+	width: 280px;
+}
+.usp_symbol {
+  display: none;
+	font-size: $fontSize-x9;
+  margin-bottom: 15px;
+}
+.usp_headline {
+	@extend .headlineLarge;
+    margin-bottom: 0.2em;
+}
+.usp_text {
+    margin: 0;
+}
+
+//Tech
+.tech {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    padding: 30px 0;
+
+    @media(min-width: 800px) {
+        @include flex-direction(row);
+    }
+}
+.tech_headline {
+  @extend .headlineLarge;
+  margin-bottom: 0.2rem;
+}
+.tech_text {
+    max-width: 33em;
+}
+.tech_partners {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @media(min-width: 800px) {
+        @include flex-direction(column);
+        width: 280px;
+    }
+}
+.tech_partner {
+    @include transitionDuration(0.2s);
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    margin: 15px 0;
+    max-height: 100px;
+    max-width: 100px;
+
+    &:hover {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+    }
+}
+
+.prices {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @media(min-width: 800px) {
+        @include flex-direction(row);
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+    }
+}
+.price {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding: 30px 0;
+    width: 250px;
+}
+.price_title {
+    font-family: $fontFamily-default;
+    text-align: center;
+    width: 100%;
+}
+.price_title--free {
+    border-bottom: 2px solid $color-priceFreeBorder;
+}
+.price_title--small {
+    border-bottom: 5px solid $color-priceSmallBorder;
+}
+.price_title--business {
+    border-bottom: 2px solid $color-priceBusinessBorder;
+}
+.price_option {
+    font-size: $fontSize-x7;
+    margin: 15px 0;
+    text-align: center;
+}
+.price_period {
+    font-size: $fontSize-x4;
+}
+.price_features {
+    font-size: $fontSize-x4;
+    list-style: disc;
+}
+
+//FAQ
+.faq {
+    @include flexbox();
+    @include flex-wrap(wrap);
+}
+.faq_question {
+    font-size: $fontSize-x5;
+    font-weight: $fontWeight-bold;
+}
+.faq_answer {
+
+}
+
+//Footer
+.footer {
+	color: $color-text;
+	padding: 2em;
+	text-align: center;
+}
+.footer_heart {
+	color: $color-footerHeart;
+}
