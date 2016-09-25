@@ -14,36 +14,45 @@ layout: default
 <div class="section section--order">
     <form class="form" method="POST" action="http://formspree.io/annmari.darj@gmail.com">
         <fieldset class="fieldset fieldset--receiver">
-            <label for="receiver_name">Mottagarens namn</label>
+            <label class="form_label" for="receiver_name">Mottagarens namn</label>
             <input id="receiver_name" type="input" class="form_input" name="receiver_name">
         </fieldset>
 
         <fieldset class="fieldset fieldset--sender">
-            <label for="sender_name">Adressatens namn</label>
-            <input id="sender_name" type="input" class="form_input" name="sender_name">
+            <legend class="form_legend">Leveransadress</legend>
+            <div class="form_subgroup">
+                <label for="sender_name">Namn</label>
+                <input id="sender_name" type="input" placeholder="Ann-Mari Darj" class="form_input" name="sender_name">
+            </div>
 
-            <label for="adress">Adress</label>
-            <input id="adress" type="input" placeholder="Lyckliga gatan 1" class="form_input" name="adress">
+            <div class="form_subgroup">
+                <label class="form_label" for="adress">Adress</label>
+                <input id="adress" type="input" placeholder="Lyckliga gatan 1" class="form_input form_input--adress" name="adress">
+            </div>
 
             <div class="form_zipCity">
-                <div>
-                    <label for="zip">Postnummer</label>
+                <div class="form_subgroup form_subgroup--zip">
+                    <label class="form_label" for="zip">Postnummer</label>
                     <input id="zip" type="input" placeholder="832 44" class="form_input" name="zip">
                 </div>
 
-                <div>
-                    <label for="city">Postort</label>
+                <div class="form_subgroup">
+                    <label class="form_label" for="city">Postort</label>
                     <input id="city" type="input" placeholder="Frösön" class="form_input" name="city">
-
                 </div>
             </div>
 
-            <label for="email">E-post</label>
-            <input id="email" type="email" class="form_input" placeholder="din@epost.se" name="_replyto">
+            <div class="form_subgroup">
+                <label for="email">E-post</label>
+                <input id="email" type="email" class="form_input" placeholder="din@epost.se" name="_replyto">
+            </div>
         </fieldset>
 
         <input type="submit" class="form_submit" value="Beställ">
     </form>
+    <div class="">
+        Pris blah blah inklusive frakt blah blah.
+    </div>
 </div>
 <div class="section section--usps">
     <div class="inner">

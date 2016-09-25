@@ -154,9 +154,32 @@
     @include justify-content(center);
     padding: 15px;
 }
+.form_legend {
+    font-family: $fontFamily-default;
+    font-size: $fontSize-x6;
+}
 //Order form
 .fieldset {
     @include flexbox();
+    margin-bottom: 1em;
+    padding: 1em;
+}
+.fieldset--sender {
+    border: 1px solid $color-formFieldsetBorder;
+}
+.form_zipCity {
+    @include flexbox();
+    @include justify-content(space-between);
+    width: 350px;
+}
+.form_subgroup {
+    @include flexbox();
+    @include flex-direction(column);
+    margin-bottom: 0.8em;
+}
+.form_subgroup--zip {
+    margin-right: 1em;
+    width: 7rem;
 }
 .form_input {
 	@include box-shadow(0,0, 2px, $color-formInputShadow, false);
@@ -166,10 +189,9 @@
 	outline: none;
 	padding: 10px;
 	text-decoration: none;
-
-    @media(min-width: 450px) {
-        min-width: 15em;
-    }
+}
+.form_input--adress {
+    width: 100%;
 }
 .form_submit {
     @include raisedButton($color-mantis,$color-textSecondary);
