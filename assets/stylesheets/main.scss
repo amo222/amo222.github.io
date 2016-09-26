@@ -147,12 +147,28 @@
     }
 }
 
+//Order
+.order {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding: 30px 0;
+}
+
+//Order summary
+.summary {
+    font-size: $fontSize-x6;
+    max-width: 20em;
+}
+.summary_list {
+    list-style: disc;
+}
+
 //Forms
 .form {
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(center);
-    padding: 15px;
 }
 .form_legend {
     font-family: $fontFamily-default;
@@ -163,6 +179,9 @@
     @include flexbox();
     margin-bottom: 1em;
     padding: 1em;
+}
+.fieldset--receiver {
+    padding-top: 0;
 }
 .fieldset--sender {
     border: 1px solid $color-formFieldsetBorder;
@@ -237,62 +256,12 @@
 	padding: 2em 0 0 0;
 	width: 280px;
 }
-.usp_symbol {
-  display: none;
-	font-size: $fontSize-x9;
-  margin-bottom: 15px;
-}
 .usp_headline {
 	@extend .headlineLarge;
     margin-bottom: 0.2em;
 }
 .usp_text {
     margin: 0;
-}
-
-.prices {
-    @include flexbox();
-    @include flex-direction(column);
-    @include align-items(center);
-
-    @media(min-width: 800px) {
-        @include flex-direction(row);
-        @include align-items(flex-start);
-        @include justify-content(space-between);
-    }
-}
-.price {
-    @include flexbox();
-    @include flex-direction(column);
-    @include align-items(center);
-    padding: 30px 0;
-    width: 250px;
-}
-.price_title {
-    font-family: $fontFamily-default;
-    text-align: center;
-    width: 100%;
-}
-.price_title--free {
-    border-bottom: 2px solid $color-priceFreeBorder;
-}
-.price_title--small {
-    border-bottom: 5px solid $color-priceSmallBorder;
-}
-.price_title--business {
-    border-bottom: 2px solid $color-priceBusinessBorder;
-}
-.price_option {
-    font-size: $fontSize-x7;
-    margin: 15px 0;
-    text-align: center;
-}
-.price_period {
-    font-size: $fontSize-x4;
-}
-.price_features {
-    font-size: $fontSize-x4;
-    list-style: disc;
 }
 
 //FAQ
@@ -315,5 +284,7 @@
 	text-align: center;
 }
 .footer_heart {
-	color: $color-footerHeart;
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
 }
