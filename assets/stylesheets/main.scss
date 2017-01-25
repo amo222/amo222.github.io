@@ -210,8 +210,13 @@
 }
 .form_zipCity {
     @include flexbox();
-    @include justify-content(space-between);
-    width: 350px;
+    @include flex-direction(column);
+
+    @media(min-width: 420px) {
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        width: 350px;
+    }
 }
 .form_subgroup {
     @include flexbox();
