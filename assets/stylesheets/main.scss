@@ -151,8 +151,9 @@
     background-size: cover;
 
     @media(min-width: 900px) {
-        background: url('/assets/images/section_features2.jpg');
+        background: url('/assets/images/section_features.jpg');
         background-position: center;
+        background-size: cover;
     }
 }
 

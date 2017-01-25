@@ -1098,8 +1098,9 @@ b {
   background-size: cover; }
   @media (min-width: 900px) {
     .section--usps {
-      background: url("/assets/images/section_features2.jpg");
-      background-position: center; } }
+      background: url("/assets/images/section_features.jpg");
+      background-position: center;
+      background-size: cover; } }
 
 .order {
   display: -webkit-box;
