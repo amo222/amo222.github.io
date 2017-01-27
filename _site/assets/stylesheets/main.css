@@ -1241,6 +1241,9 @@ b {
   padding: 10px;
   text-decoration: none; }
 
+.form_input--name {
+  width: 80%; }
+
 .form_input--adress {
   width: 100%; }
 
