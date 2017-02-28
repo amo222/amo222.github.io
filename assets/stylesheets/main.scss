@@ -156,6 +156,11 @@
         background-size: cover;
     }
 }
+.section--message-box {
+    @include align-items(center);
+    @include justify-content(center);
+    height: calc(100vh - 100px);
+}
 
 //Order
 .order {
@@ -183,6 +188,18 @@
 
     @media(min-width: 800px) {
         margin-top: 0;
+    }
+}
+
+.message-box {
+    background-color: $color-sectionBackground;
+    border-radius: 5px;
+    height: 50vh;
+    padding: 2em;
+    width: 100vw;
+
+    @media(min-width: 900px) {
+        width: 50vw;
     }
 }
 
