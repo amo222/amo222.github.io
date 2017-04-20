@@ -140,17 +140,17 @@ table {
 strong {
   font-weight: 700; }
 
-.headline_common, .headlineLargest, .hero_headline, .headlineLarge, .usp_headline, .faq_headline, .headlineMedium, .hero_subheading, .headlineSmall {
+.headline_common, .headlineLargest, .carousel_headline, .hero_headline, .headlineLarge, .usp_headline, .faq_headline, .headlineMedium, .hero_subheading, .headlineSmall {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.2; }
 
-.headlineLargest, .hero_headline {
+.headlineLargest, .carousel_headline, .hero_headline {
   font-size: 32px; }
   @media (min-width: 381px) {
-    .headlineLargest, .hero_headline {
+    .headlineLargest, .carousel_headline, .hero_headline {
       font-size: 10vw; } }
   @media (min-width: 900px) {
-    .headlineLargest, .hero_headline {
+    .headlineLargest, .carousel_headline, .hero_headline {
       font-size: 64px; } }
 
 .headlineLarge, .usp_headline, .faq_headline {
@@ -996,6 +996,58 @@ b {
 
 .logo_accent {
   font-weight: 700; }
+
+.carousel {
+  height: 90vh;
+  min-height: 310px; }
+
+.carousel-cell {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%; }
+
+.carousel-cell--first {
+  background-image: url("/assets/images/background_hero_small.jpg");
+  background-position: center center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .carousel-cell--first {
+      background-image: url("/assets/images/background_hero.jpg");
+      background-position: left center;
+      background-size: cover; } }
+
+.carousel-cell--second {
+  background-image: url("/assets/images/background_hero_small_2.jpg");
+  background-position: center center;
+  background-size: cover;
+  justify-content: flex-end; }
+  @media (min-width: 768px) {
+    .carousel-cell--second {
+      background-image: url("/assets/images/section_features.jpg");
+      background-position: left center;
+      background-size: cover; } }
+
+.carousel-cell--third {
+  background-image: url("/assets/images/background_hero_small_3.jpg");
+  background-position: center center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .carousel-cell--third {
+      background-image: url("/assets/images/background_hero_3.jpg");
+      background-position: left center;
+      background-size: cover; } }
+
+.carousel_headline {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  display: none;
+  text-align: center;
+  padding: 0 15px 0 15px;
+  max-width: 45%; }
+  @media (min-width: 768px) {
+    .carousel_headline {
+      display: block; } }
 
 .hero {
   display: -webkit-box;

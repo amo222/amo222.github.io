@@ -73,6 +73,63 @@
 .logo_accent {
   font-weight: $fontWeight-bold;
 }
+.carousel {
+  height: 90vh;
+  min-height: 310px;
+}
+.carousel-cell {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.carousel-cell--first {
+  background-image: url('/assets/images/background_hero_small.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  @media(min-width: 768px) {
+    background-image: url('/assets/images/background_hero.jpg');
+    background-position: left center;
+    background-size: cover;
+  }
+}
+.carousel-cell--second {
+  background-image: url('/assets/images/background_hero_small_2.jpg');
+  background-position: center center;
+  background-size: cover;
+  justify-content: flex-end;
+
+  @media(min-width: 768px) {
+    background-image: url('/assets/images/section_features.jpg');
+    background-position: left center;
+    background-size: cover;
+  }
+}
+.carousel-cell--third {
+  background-image: url('/assets/images/background_hero_small_3.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  @media(min-width: 768px) {
+      background-image: url('/assets/images/background_hero_3.jpg');
+      background-position: left center;
+      background-size: cover;
+  }
+}
+.carousel_headline {
+  @extend .headlineLargest;
+  @include textShadow();
+  color: $color-textSecondary;
+  display: none;
+  text-align: center;
+  padding: 0 15px 0 15px;
+  max-width: 45%;
+
+  @media(min-width: 768px) {
+      display: block;
+  }
+}
 .hero {
   @include flexbox();
   @include align-items(center);
