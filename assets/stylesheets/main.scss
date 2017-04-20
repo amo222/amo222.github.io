@@ -73,6 +73,9 @@
 .logo_accent {
   font-weight: $fontWeight-bold;
 }
+.carousel {
+
+}
 .hero {
   @include flexbox();
   @include align-items(center);
