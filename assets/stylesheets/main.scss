@@ -74,7 +74,53 @@
   font-weight: $fontWeight-bold;
 }
 .carousel {
+  height: 95vh;
+  min-height: 310px;
+}
+.carousel-cell {
+  height: 100%;
+  width: 100%;
+}
+.carousel-cell--first {
+  background-image: url('/assets/images/background_hero.jpg');
+  background-size: cover;
 
+  @media(min-width: 768px) {
+    background-size: cover;
+  }
+}
+.carousel-cell--second {
+  background-image: url('/assets/images/background_hero.jpg');
+  background-size: cover;
+
+  @media(min-width: 768px) {
+    background-size: cover;
+  }
+}
+.carousel-cell--third {
+  background-image: url('/assets/images/background_hero.jpg');
+  background-size: cover;
+
+  @media(min-width: 768px) {
+    background-size: cover;
+  }
+}
+.carousel_image {
+
+}
+.carousel_headline {
+  @extend .headlineLargest;
+  @include textShadow();
+  color: $color-textSecondary;
+  display: block;
+  text-align: center;
+  padding: 0 15px 0.3em 15px;
+  position: absolute;
+  max-width: 50%;
+}
+.carousel_headline--first {
+    top: 45%;
+    left: 30px;
 }
 .hero {
   @include flexbox();

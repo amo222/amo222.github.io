@@ -65,7 +65,7 @@ var flky = new Flickity( '.carousel', {
   rightToLeft: false,
   // enables right-to-left layout
 
-  setGallerySize: true,
+  setGallerySize: false,
   // sets the height of gallery
   // disable if gallery already has height set with CSS
 
