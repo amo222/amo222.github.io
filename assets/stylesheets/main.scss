@@ -130,6 +130,13 @@
       display: block;
   }
 }
+.flickity-prev-next-button {
+    display: none;
+
+    @media(min-width: 768px) {
+        display: inline-block;
+    }
+}
 .hero {
   @include flexbox();
   @include align-items(center);

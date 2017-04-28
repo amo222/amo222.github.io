@@ -1049,6 +1049,12 @@ b {
     .carousel_headline {
       display: block; } }
 
+.flickity-prev-next-button {
+  display: none; }
+  @media (min-width: 768px) {
+    .flickity-prev-next-button {
+      display: inline-block; } }
+
 .hero {
   display: -webkit-box;
   display: -webkit-flex;
