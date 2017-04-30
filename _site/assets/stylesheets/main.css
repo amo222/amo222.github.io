@@ -140,7 +140,7 @@ table {
 strong {
   font-weight: 700; }
 
-.headline_common, .headlineLargest, .carousel_headline, .hero_headline, .headlineLarge, .usp_headline, .faq_headline, .headlineMedium, .hero_subheading, .headlineSmall {
+.headline_common, .headlineLargest, .carousel_headline, .hero_headline, .headlineLarge, .usp_headline, .faq_headline, .headlineMedium, .content_headline, .hero_subheading, .headlineSmall {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.2; }
 
@@ -162,14 +162,14 @@ strong {
     .headlineLarge, .usp_headline, .faq_headline {
       font-size: 40px; } }
 
-.headlineMedium, .hero_subheading {
+.headlineMedium, .content_headline, .hero_subheading {
   font-size: 20px;
   line-height: 1.4; }
   @media (min-width: 380px) {
-    .headlineMedium, .hero_subheading {
+    .headlineMedium, .content_headline, .hero_subheading {
       font-size: 5vw; } }
   @media (min-width: 580px) {
-    .headlineMedium, .hero_subheading {
+    .headlineMedium, .content_headline, .hero_subheading {
       font-size: 30px; } }
 
 .responsiveSmall, .headlineSmall {
@@ -939,6 +939,10 @@ b {
       width: calc(1024px - 30px);
       max-width: calc(1024px - 30px); } }
 
+.ordered_list {
+  list-style-type: decimal;
+  margin-left: 2em; }
+
 .flex_filler {
   display: flex;
   flex-grow: 1; }
@@ -1071,8 +1075,6 @@ b {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  background-image: url("/assets/images/background_hero.jpg");
-  background-size: cover;
   background-position-y: center;
   background-position-x: center;
   border-bottom: 3px solid #82BF56;
@@ -1089,6 +1091,10 @@ b {
       -webkit-justify-content: flex-start;
       -moz-justify-content: flex-start;
       justify-content: flex-start; } }
+
+.hero--cookies {
+  background-image: url("/assets/images/background_hero_cookies.jpg");
+  background-size: cover; }
 
 .hero_content {
   max-width: 33em; }
@@ -1380,10 +1386,10 @@ b {
 
 .description_text {
   font-size: 24px;
-  margin-bottom: 0;
+  margin-bottom: 1em;
   max-width: 33em; }
-  .description_text:nth-child(1) {
-    margin-bottom: 1em; }
+  .description_text:nth-child(2) {
+    margin-bottom: 0; }
 
 .usp_container {
   display: -webkit-box;
