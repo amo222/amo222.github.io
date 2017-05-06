@@ -1051,7 +1051,8 @@ b {
   max-width: 45%; }
   @media (min-width: 768px) {
     .carousel_headline {
-      display: block; } }
+      display: block;
+      padding: 0 15px 0 70px; } }
 
 .flickity-prev-next-button {
   display: none; }
@@ -1084,13 +1085,6 @@ b {
   @media (min-width: 720px) {
     .hero {
       padding: 75px 0 30px 0; } }
-  @media (min-width: 990px) {
-    .hero {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      -webkit-justify-content: flex-start;
-      -moz-justify-content: flex-start;
-      justify-content: flex-start; } }
 
 .hero--cookies {
   background-image: url("/assets/images/background_hero_cookies.jpg");
