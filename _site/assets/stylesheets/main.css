@@ -1052,7 +1052,7 @@ b {
   @media (min-width: 768px) {
     .carousel_headline {
       display: block;
-      padding: 0 15px 0 70px; } }
+      padding: 0 70px 0 70px; } }
 
 .flickity-prev-next-button {
   display: none; }
