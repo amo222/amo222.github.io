@@ -286,6 +286,7 @@
 //Order form
 .fieldset {
     @include flexbox();
+    @include flex-direction(column);
     margin-bottom: 1em;
     padding: 1em;
 }

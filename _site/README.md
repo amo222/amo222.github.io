@@ -1,5 +1,5 @@
-# Crowdscreen marketing page
-This is the Jekyll Repository of Crowdscreens public pages.
+# Forstamiljonen marketing page
+This is the Jekyll Repository of forstamiljonen public page.
 
 ## Installation
 Make sure you have the ruby version stated in the Gemfile installed on your local development machine.
